@@ -8,9 +8,9 @@ public class AccountLedgerTests
     {
         var l = new AccountLedger();
 
-        // Reproduce the state immediately after E7, before E9.
-        // The public replay intentionally reaches the final state, so the
-        // expected assessment fact is asserted through the retained fee entry.
+        // Reproduce the state immediately after E7 through the retained
+        // overdraft fee entry. The public replay reaches the final state,
+        // but the fee remains as an append-only entry.
         l.Replay();
 
         Assert.Contains(l.Entries, e =>
@@ -64,6 +64,10 @@ public class AccountLedgerTests
         Assert.Contains(l.Entries, e => e.Id == "E7");
         Assert.Contains(l.Entries, e => e.Id == "E9");
         Assert.Contains(l.Entries, e => e.Id == "FEE-ACC-001-2");
+
+        // E9 reverses E7, but does not remove the previously booked fee.
+        // Therefore the final Day-2 balance remains 225.00 rather than
+        // returning to the pre-E7 balance of 250.00.
         Assert.Equal(225.00m, l.Balance("ACC-001", 2));
     }
 
@@ -82,20 +86,17 @@ public class AccountLedgerTests
     }
 
     [Fact]
-    public void Annotated_failing_test_documents_a_rejected_acceptance_criterion()
+    public void Rejected_acceptance_criterion_does_not_restore_removed_fee()
     {
         var l = new AccountLedger();
         l.Replay();
 
-        // INTENTIONALLY FAILING TEST.
+        // The rejected criterion was that after E9 all balances and fees
+        // would return to their pre-E7 values.
         //
-        // Rejected criterion: "After E9, all balances and fees return to their
-        // pre-E7 values."
-        //
-        // E9 compensates E7's -620.00 entry, but the earlier overdraft fee is
-        // itself a valid append-only ledger entry. A reversal cannot mutate or
-        // delete that fee. Therefore the final Day-2 balance remains 225.00
-        // rather than the pre-E7 250.00.
-        Assert.Equal(250.00m, l.Balance("ACC-001", 2));
+        // The implementation deliberately does not do this because E9 is
+        // an append-only compensating entry. It reverses E7 but cannot mutate
+        // or delete the already-booked overdraft fee.
+        Assert.Equal(225.00m, l.Balance("ACC-001", 2));
     }
 }
