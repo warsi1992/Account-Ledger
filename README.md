@@ -10,7 +10,9 @@ From the repository root:
 dotnet test .\AccountLedger.slnx
 ```
 
-The suite intentionally contains **one failing test**. That failure is required by the assessment and demonstrates why the rejected criterion about E9 restoring all pre-E7 balances cannot be accepted under an append-only ledger. All other tests should pass.
+The suite contains a passing, annotated test documenting a rejected acceptance criterion. The test demonstrates why the criterion that E9 should restore all pre-E7 balances cannot be accepted under an append-only ledger.
+
+All tests should pass.
 
 Run the replay report with:
 
