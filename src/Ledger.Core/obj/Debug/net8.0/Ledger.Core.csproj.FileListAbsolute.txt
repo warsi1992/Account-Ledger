@@ -1,0 +1,14 @@
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\bin\Debug\net8.0\Ledger.Core.exe
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\bin\Debug\net8.0\Ledger.Core.deps.json
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\bin\Debug\net8.0\Ledger.Core.runtimeconfig.json
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\bin\Debug\net8.0\Ledger.Core.dll
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\bin\Debug\net8.0\Ledger.Core.pdb
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.AssemblyInfoInputs.cache
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.AssemblyInfo.cs
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.csproj.CoreCompileInputs.cache
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.dll
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\refint\Ledger.Core.dll
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.pdb
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\Ledger.Core.genruntimeconfig.cache
+C:\Users\GulamWaris\Downloads\account-ledger-fixed (1)\account-ledger\src\Ledger.Core\obj\Debug\net8.0\ref\Ledger.Core.dll
